@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>Expense Tracker</header>
+
+  <div class="wrapper">
+    <div class="tracker-card">
+      <!-- Form -->
+      <form id="expense-form">
+        <input type="text" id="desc" placeholder="Description" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="date" id="date" required>
+        <select id="category">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Expense</button>
+      </form>
+
+      <!-- Table -->
+      <table id="expense-table">
+        <thead>
+          <tr><th>Description</th><th>Amount</th><th>Date</th><th>Category</th><th>Action</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <!-- Charts -->
+      <div class="charts">
+        <canvas id="pieChart"></canvas>
+        <canvas id="barChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
